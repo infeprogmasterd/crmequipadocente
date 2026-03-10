@@ -1,1 +1,173 @@
+<html lang="pt-pt"><head>
+<meta charset="UTF-8">
+<title>Cartões</title>
+<style>
+  body { font-family: Arial, sans-serif, 'Unbounded'; background: none; padding: 20px; }
+  .grupo { margin-bottom: 40px; }
+  .cartoes { display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start; }
+  .card {
+    position: relative;
+    width: 300px;
+    height: 440px;
+    overflow: hidden;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  .card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+  .name {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    z-index: 2;
+  }
 
+  .title {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: #f58426;
+    padding: 10px;
+    transition: bottom 0.4s ease-in-out;
+    z-index: 2;
+  }
+  .card:hover .title { bottom: 120px; }
+  .hover-info {
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 16px;
+    font-size: 14px;
+    color: #333;
+    transition: bottom 0.4s ease-in-out;
+    z-index: 3;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    max-height: 120px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+  .hover-info p {
+    text-align: left;
+  }
+  .espelhado {
+    transform: scaleX(-1);
+  }
+  .card.ativo img {
+    filter: grayscale(0%) !important;
+    transform: scale(1.05) !important;
+  }
+  .grupo h2::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ccc;
+    margin-bottom: 16px;
+    border-radius: 2px;
+  }
+  .card:hover .hover-info { bottom: 0; }
+</style>
+</head>
+<body>
+<div class="grupo">
+<div class="grupo"><h2>e-Tutor(es)</h2><div class="cartoes">
+  <div class="cartoes">
+    <div class="card ativo">
+      <img src="imagens/Pedro Bernardino.jpg" alt="Foto de Pedro Bernardino">
+      <div class="name"></div>
+      <div class="title"><strong>e-Tutor - Pedro Ferreira Bernardino</strong></div>
+      <div class="hover-info"><p>Formação na área de Gestão de Equipamentos Informáticos, com experiência em consultoria, implementação e manutenção de redes e parques informáticos, bem como em suporte técnico remoto e presencial e na implementação de políticas de segurança.</p></div>
+    </div>
+    <div class="card">
+      <img src="imagens/Francisco Costa Lima.jpg" alt="Foto de Lucília Araújo">
+      <div class="name"></div>
+      <div class="title"><strong>e-Tutor - Francisco Costa Lima</strong></div>
+      <div class="hover-info"><p>Docente com formação pedagógica e curso avançado de informática. Possuo experiência no ensino e acompanhamento de alunos na área das tecnologias de informação, promovendo a aprendizagem de competências informáticas essenciais em contexto académico e profissional.
+ </p></div>
+    </div>
+
+    <div class="grupo">
+  <h1 class="fixo">Orientação</h1>
+  <div class="grupo">
+    <div class="cartoes">
+      <div class="card">
+        <img src="imagens/Patricia_Jarreta.jpg" alt="Foto de Patrícia Jarreta">
+        <div class="name"></div>
+        <div class="title"><strong>Orientadora - Patrícia Jarreta</strong></div>
+        <div class="hover-info"><p>Mestrado em Educação e Formação na especialidade de Organização e Gestão da Educação e da Formação - Instituto de Educação da Universidade de Lisboa.</p></div>
+      </div>
+      <div class="card">
+        <img src="imagens/Rita Dias.jpg" alt="Foto de Rita Dias">
+        <div class="name"></div>
+        <div class="title"><strong>Orientadora - Rita Dias</strong></div>
+        <div class="hover-info"><p>Mestrado em Educação e Formação com Especialização em Desenvolvimento Social e Cultural pelo IEUL (Instituto de Educação da Universidade de Lisboa).</p></div>
+      </div>
+            <div class="card">
+        <img src="imagens/Bianca_Pinho.jpg" alt="Foto de Bianca Pinho">
+        <div class="name"></div>
+        <div class="title"><strong>Orientadora - Bianca Pinho</strong></div>
+        <div class="hover-info"><p>Licenciatura em Educação e Formação pelo IEUL (Instituto de Educação da Universidade de Lisboa).</p></div>
+      </div>
+      <div class="card">
+        <img src="imagens/Laura_Monteiro.jpg" alt="Foto de Laura Monteiro">
+        <div class="name"></div>
+        <div class="title"><strong>Orientadora - Laura Monteiro</strong></div>
+        <div class="hover-info"><p>Licenciatura em Educação e Formação pelo IEUL (Instituto de Educação da Universidade de Lisboa).</p></div>
+      </div>
+      <div class="card">
+        <img src="imagens/Renata_Marchao.jpg" alt="Foto de Renata Marchão">
+        <div class="name"></div>
+        <div class="title"><strong>Orientadora - Renata Marchão</strong></div>
+        <div class="hover-info"><p>Licenciatura em Estudos Portugueses pela Faculdade de Ciências Sociais e Humanas da Universidade Nova de Lisboa.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".card").forEach(card => {
+      let jaAtivado = false;
+      card.addEventListener("mouseenter", () => {
+        if (!jaAtivado) {
+          card.classList.add("ativo");
+          jaAtivado = true;
+        }
+      });
+    });
+  });
+</script>
+
+
+</div></div></div></div></div></div></div></body></html>
